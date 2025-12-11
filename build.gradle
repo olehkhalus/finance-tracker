@@ -14,6 +14,10 @@ java {
 	}
 }
 
+bootRun {
+    jvmArgs = ["-Duser.timezone=UTC"]
+}
+
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor

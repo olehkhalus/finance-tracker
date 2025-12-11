@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: finance-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: finance_db
+      POSTGRES_USER: finance_user
+      POSTGRES_PASSWORD: finance_pass
+      TZ: Europe/Kyiv
+    volumes:
+      - data:/var/lib/postgresql/data
+
+volumes:
+  data:
